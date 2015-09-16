@@ -15,5 +15,6 @@ class TaskmanagersController < ApplicationController
   end
 
   def new
+    render json: Taskmanager.new(task: "").to_json, status: 200
   end
 end
