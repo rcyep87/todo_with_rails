@@ -17,4 +17,10 @@ class TaskmanagersController < ApplicationController
   def new
     render json: Taskmanager.new(task: "").to_json, status: 200
   end
+
+  def destroy
+    Taskmanager.find(params[:id]).destroy
+    render json: { msg: "Congratulations you have deleted the entire database!" }.to_json, status: 200
+  end
+
 end
