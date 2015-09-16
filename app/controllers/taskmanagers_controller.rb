@@ -25,7 +25,12 @@ class TaskmanagersController < ApplicationController
 
   def create
     new_task = Taskmanager.create({ task: params[:body]})
-    render json: { msg: new_task }.to_json, status: 200
+    render json: new_task, status: 200
+  end
+
+  def update
+    update_task_status = Taskmanager.update(params[:id], completed: params[:completed])
+    render json: update_task_status, status: 200
   end
 
 end
