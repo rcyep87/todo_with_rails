@@ -23,4 +23,9 @@ class TaskmanagersController < ApplicationController
     render json: { msg: "Congratulations you have deleted the entire database!" }.to_json, status: 200
   end
 
+  def create
+    new_task = Taskmanager.create({ task: params[:body]})
+    render json: { msg: new_task }.to_json, status: 200
+  end
+
 end
