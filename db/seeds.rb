@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+task_words = %w(build ruby bundler errors ughh rake what is going on how works linenumber stacktrace sleep coffee caffeine chris shhhhhh)
+
+30.times do |n|
+  task = 5.times.map { task_words.sample }.join(' ')
+  Taskmanager.create({ task: task })
+end
