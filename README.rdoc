@@ -1,28 +1,23 @@
-== README
+Todo With Rails!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Description
+* Given a set of URL parameters, you have the ability to read, update,
+  create and delete tasks in a database in JSON.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+To Interact with the API
+* Going to http://localhost:3000/todos will display all the tasks
+  as JSON
+* Going to http://localhost:3000/todos/new will display an empty
+  (new) task as JSON
+* Going to http://localhost:3000/todos/id# will display a single task
+  as JSON. If you go to a task where the id DOES NOT exist, you will
+  receive an error message as JSON
+* Sending a POST request to http://localhost:3000/todos with the
+  params of { "body": "Name of Task" } will allow you to store a new
+  task into the database
+* Sending a DELETE request to http://localhost:3000/todos/id# will
+  delete that task from the database and return a message stating
+  task was deleted
+* Sending a PUT request to http://localhost:3000/todos/id# with the
+  params of { completed: [true/false] } will update the boolean value
+  for "completed" attribute in the database.
