@@ -15,7 +15,14 @@ class TaskmanagersController < ApplicationController
   def show
     if Taskmanager.exists?(params[:id])
       task = Taskmanager.find(params[:id])
-      render json: task.to_json, status: 200
+      respond_to do |f|
+        f.html do
+          render template: 'layouts/show.html.erb', locals: { one_task: task }
+        end
+        f.json do
+          render json: task.to_json, status: 200
+        end
+      end
     else
       render json: { error_msg: "Record not found!", id: params[:id] }.to_json, status: 404
     end
