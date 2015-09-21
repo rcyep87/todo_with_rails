@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   post   '/todos',        to: 'taskmanagers#create'
   put    '/todos/:id',    to: 'taskmanagers#update'
   delete '/todos/:id',    to: 'taskmanagers#destroy'
+
+  root 'taskmanagers#index'
 end

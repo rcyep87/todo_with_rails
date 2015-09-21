@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <h1>Welcome to Todo app! <small> <%= Time.now.strftime("at %I:%M%p") %> </small></h1>
+  </header>
 
-<%= yield %>
+  <main>
+    <%= yield %>
+  </main>
+  <footer>
+    <b>Designed by the Mayor</b>
+  </footer>
 
 </body>
 </html>
