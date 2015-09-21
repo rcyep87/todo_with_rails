@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to Todo app! <small> <%= Time.now.strftime("at %I:%M%p") %> </small></h1>
+    <h1>Welcome to Todo app!</h1>
 
     <nav>
       <a href="/todos"><b>Home</b></a>
@@ -20,7 +20,8 @@
     <%= yield %>
   </main>
   <footer>
-    Designed by <strong><i>the</i></strong> Mayor &trade;
+    Designed by <strong><i>the</i></strong> Mayor &trade; &#x2602;
+    <br><small> <%= Time.now.strftime("%I:%M%p") %> </small>
   </footer>
 
 </body>
