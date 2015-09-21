@@ -17,14 +17,23 @@
  body {
    text-align: justify;
    font-family: Helvetica;
-   color: #333;
-   line-height: 1;
+   color: #1F5081;
+   line-height: 1.25;
+   background-color: ;
 }
 
  a {
-   color: lightblue;
+   color: #5A5A5A;
  }
 
- h1, h2 {
+ h1{
    color: #5A5A5A;
+ }
+
+ h2{
+   color: #2CBE60;
+ }
+
+ footer {
+   text-align: center;
  }
